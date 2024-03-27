@@ -9,10 +9,12 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
+        
         ZStack{
             Image("blue clothing image")
                 .resizable()
                 .scaledToFill()
+                .opacity(0.86)
                 .frame(width: .screenWidth, height: .screenHeight)
             
             VStack{
@@ -20,23 +22,25 @@ struct WelcomeView: View {
                 Image(systemName: "globe")
                     .resizable()
                     .scaledToFit()
+                    .background(Color.white)
                     .frame(width: 60 , height: 60
                     )
                     .padding(.bottom , 0)
                 
                 Text("Welcome to Our Store")
                     .font(.customfont(.semibold, fontSize: 48))
-                    .foregroundColor(.darkGray)
+                    .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                 
                 Text("Welcome to our store")
                     .font(.customfont(.medium, fontSize: 20))
-                    .foregroundColor(.darkGray.opacity(0.7))
+                    .foregroundColor(.white.opacity(0.7))
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 30)
                 
+                
                 RoundButton(title: "Get started"){
-                    
+                   
                 }
                 
                 Spacer()
@@ -54,5 +58,7 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView()
+    NavigationView {
+       WelcomeView()
+    }
 }

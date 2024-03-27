@@ -37,6 +37,9 @@
 		596BF7122BAFE0A4004770BE /* RobotoSerif-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 596BF6FE2BAFE0A4004770BE /* RobotoSerif-ThinItalic.ttf */; };
 		596BF7152BB00387004770BE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596BF7142BB00387004770BE /* Launch Screen.storyboard */; };
 		596BF7172BB003DE004770BE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596BF7162BB003DE004770BE /* LoginView.swift */; };
+		59B324C32BB1631500EA100D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B324C22BB1631500EA100D /* SignUpView.swift */; };
+		59B324C52BB163C200EA100D /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B324C42BB163C200EA100D /* LineTextField.swift */; };
+		59C890CD2BB31FAB004B7AFF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C890CC2BB31FAB004B7AFF /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		596BF7132BAFE113004770BE /* Online-Clothing-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Online-Clothing-app-Info.plist"; sourceTree = SOURCE_ROOT; };
 		596BF7142BB00387004770BE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		596BF7162BB003DE004770BE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		59B324C22BB1631500EA100D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		59B324C42BB163C200EA100D /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		59C890CC2BB31FAB004B7AFF /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				596BF6E82BAFE075004770BE /* Views */,
 				596BF6E32BAFE042004770BE /* CommonUIs */,
 				596BF6B72BAFDFC4004770BE /* Online_Clothing_appApp.swift */,
+				596BF6FF2BAFE0A4004770BE /* Fonts */,
 				596BF6BB2BAFDFC5004770BE /* Assets.xcassets */,
 				596BF6BD2BAFDFC5004770BE /* Preview Content */,
 				596BF7142BB00387004770BE /* Launch Screen.storyboard */,
@@ -184,7 +191,7 @@
 			children = (
 				596BF6E12BAFE042004770BE /* RoundButton.swift */,
 				596BF6E22BAFE042004770BE /* UIExtensions.swift */,
-				596BF6FF2BAFE0A4004770BE /* Fonts */,
+				59B324C42BB163C200EA100D /* LineTextField.swift */,
 			);
 			path = CommonUIs;
 			sourceTree = "<group>";
@@ -194,6 +201,7 @@
 			children = (
 				596BF6E62BAFE075004770BE /* WelcomeView.swift */,
 				596BF7162BB003DE004770BE /* LoginView.swift */,
+				59B324C22BB1631500EA100D /* SignUpView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 		596BF6EA2BAFE082004770BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				59C890CC2BB31FAB004B7AFF /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -398,9 +407,12 @@
 			files = (
 				596BF6E92BAFE075004770BE /* WelcomeView.swift in Sources */,
 				596BF6E42BAFE042004770BE /* RoundButton.swift in Sources */,
+				59C890CD2BB31FAB004B7AFF /* SignUpViewModel.swift in Sources */,
 				596BF6B82BAFDFC4004770BE /* Online_Clothing_appApp.swift in Sources */,
+				59B324C32BB1631500EA100D /* SignUpView.swift in Sources */,
 				596BF7172BB003DE004770BE /* LoginView.swift in Sources */,
 				596BF6E52BAFE042004770BE /* UIExtensions.swift in Sources */,
+				59B324C52BB163C200EA100D /* LineTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

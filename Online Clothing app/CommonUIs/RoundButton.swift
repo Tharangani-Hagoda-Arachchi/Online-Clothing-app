@@ -16,7 +16,7 @@ struct RoundButton: View {
         }, label: {
             Text(title)
                 .font(.customfont(.semibold, fontSize: 30))
-                .foregroundColor(.darkGray)
+                .foregroundColor(.white)
                 .multilineTextAlignment(.center)
         })
         
@@ -29,5 +29,5 @@ struct RoundButton: View {
 
 #Preview {
     RoundButton()
-        .padding(20)
+        .padding(30)
 }

@@ -1,17 +1,18 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  Online Clothing app
 //
-//  Created by Malsha Bopage on 2024-03-24.
+//  Created by Malsha Bopage on 2024-03-25.
 //
-
 
 import SwiftUI
 
-struct LoginView: View {
+struct SignUpView: View {
+   
+    @State private var signupVM = SignUpViewModel()
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @State private var signupVM = SignUpViewModel()
+  
     
     var body: some View {
      
@@ -29,7 +30,7 @@ struct LoginView: View {
                     .padding(.bottom, .screenWidth * 0.1)
               
                 
-                Text("Login")
+                Text("Sign Up")
                     .font(.customfont(.semibold, fontSize: 28))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
@@ -41,36 +42,43 @@ struct LoginView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, .screenWidth * 0.1)
                 
-                LineTextField(title: "Email",placholder: "Enter Email", txt: $signupVM.email)
+                TextField("Enter Email", text: $signupVM.email)
                     .padding(20)
-                    .background(Color.white.opacity(0.6))
+                    .background(Color.white.opacity(0.4))
                     .cornerRadius(20)
                 
                     .padding(.bottom, .screenWidth * 0.04)
                 
-                LineTextField(title: "Password",placholder: "Enter Password", txt: $signupVM.password)
+                TextField("Enter Password", text: $signupVM.email)
                     .padding(20)
-                    .background(Color.white.opacity(0.6))
+                    .background(Color.white.opacity(0.4))
                     .cornerRadius(20)
 //                EntryField(sfSymbolName: "envelope", placeHolder: "Email", prompt: signupVM.emailPrompt, field: $signupVM.email)
                 
                     .padding(.bottom, .screenWidth * 0.04)
+               
+                TextField("Confirm Password", text: $signupVM.email)
+                    .padding(20)
+                    .background(Color.white.opacity(0.4))
+                    .cornerRadius(20)
                 
-                RoundButton(title: "Log In") {
+                    .padding(.bottom, .screenWidth * 0.04)
+                
+                RoundButton(title: "Sign Up") {
                  
                 }
                 .padding(.bottom, .screenWidth * 0.04)
                 
                 
                 NavigationLink {
-                    SignUpView()
+                    LoginView()
                 } label: {
                     HStack{
-                        Text("Don’t have an account?")
+                        Text("Already have a account?")
                             .font(.customfont(.semibold, fontSize: 20))
                             .foregroundColor(.primaryText)
                         
-                        Text("Signup")
+                        Text("Login")
                             .font(.customfont(.semibold, fontSize: 20))
                             .foregroundColor(.white)
                     }
@@ -83,7 +91,7 @@ struct LoginView: View {
 //            .padding(.top, .topInsets + 64)
 //            .padding(.horizontal, 20)
 //            .padding(.bottom, .bottomInsets)
-//            
+//
             .padding(.top, 60)
             .padding(.horizontal, 20)
             .padding(.bottom, 60)
@@ -103,8 +111,7 @@ struct LoginView: View {
             
         }
 
-        .background(Color.darkBlue)
-        .opacity(0.76)
+        .background(Color.blue)
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
@@ -114,9 +121,7 @@ struct LoginView: View {
 }
 
 #Preview {
-    NavigationView {
-        LoginView()
-    }
+    SignUpView()
 }
 
 
