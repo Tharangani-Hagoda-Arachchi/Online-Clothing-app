@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59044B722BB677ED00B54669 /* HashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044B712BB677ED00B54669 /* HashtagsView.swift */; };
+		59044B742BB6998C00B54669 /* TrendingHashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044B732BB6998C00B54669 /* TrendingHashtagsView.swift */; };
+		59044B762BB69D4B00B54669 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044B752BB69D4B00B54669 /* FooterView.swift */; };
 		596BF6B82BAFDFC4004770BE /* Online_Clothing_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596BF6B72BAFDFC4004770BE /* Online_Clothing_appApp.swift */; };
 		596BF6BC2BAFDFC5004770BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596BF6BB2BAFDFC5004770BE /* Assets.xcassets */; };
 		596BF6BF2BAFDFC5004770BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596BF6BE2BAFDFC5004770BE /* Preview Assets.xcassets */; };
@@ -68,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59044B712BB677ED00B54669 /* HashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagsView.swift; sourceTree = "<group>"; };
+		59044B732BB6998C00B54669 /* TrendingHashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingHashtagsView.swift; sourceTree = "<group>"; };
+		59044B752BB69D4B00B54669 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		596BF6B42BAFDFC4004770BE /* Online Clothing app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online Clothing app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596BF6B72BAFDFC4004770BE /* Online_Clothing_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Online_Clothing_appApp.swift; sourceTree = "<group>"; };
 		596BF6BB2BAFDFC5004770BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -291,6 +297,9 @@
 				5999860C2BB533D400C08ED9 /* HeaderView.swift */,
 				599E599D2BB5769800980D46 /* CategoryView.swift */,
 				599E599F2BB57BBB00980D46 /* ProductItemView.swift */,
+				59044B712BB677ED00B54669 /* HashtagsView.swift */,
+				59044B732BB6998C00B54669 /* TrendingHashtagsView.swift */,
+				59044B752BB69D4B00B54669 /* FooterView.swift */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";
@@ -445,7 +454,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59044B742BB6998C00B54669 /* TrendingHashtagsView.swift in Sources */,
 				5999860A2BB532EA00C08ED9 /* HomeView.swift in Sources */,
+				59044B762BB69D4B00B54669 /* FooterView.swift in Sources */,
 				599E599C2BB569E400980D46 /* Categories.swift in Sources */,
 				5999860F2BB5367C00C08ED9 /* typealias.swift in Sources */,
 				596BF6E92BAFE075004770BE /* WelcomeView.swift in Sources */,
@@ -453,6 +464,7 @@
 				59C890CD2BB31FAB004B7AFF /* SignUpViewModel.swift in Sources */,
 				599E59982BB55D3500980D46 /* Product.swift in Sources */,
 				596BF6B82BAFDFC4004770BE /* Online_Clothing_appApp.swift in Sources */,
+				59044B722BB677ED00B54669 /* HashtagsView.swift in Sources */,
 				599E599A2BB562CA00980D46 /* Enums.swift in Sources */,
 				5999860D2BB533D400C08ED9 /* HeaderView.swift in Sources */,
 				59B324C32BB1631500EA100D /* SignUpView.swift in Sources */,

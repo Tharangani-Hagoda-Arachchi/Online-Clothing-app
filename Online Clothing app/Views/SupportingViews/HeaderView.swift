@@ -24,6 +24,7 @@ struct HeaderView: View {
                 }
                 .frame(width: 24, height: 24)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 20)
                 
                 Image("Feminine Black Purple Brand Fashion Logo")
                     .resizable()
@@ -39,6 +40,7 @@ struct HeaderView: View {
                 }
                 .frame(width: 24, height: 24)
                 .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.trailing, 20)
             }
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)

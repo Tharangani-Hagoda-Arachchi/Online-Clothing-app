@@ -13,7 +13,7 @@ struct Online_Clothing_appApp: App {
         WindowGroup {
             
             NavigationView{
-                WelcomeView()
+                HomeView()
             }
         }
     }

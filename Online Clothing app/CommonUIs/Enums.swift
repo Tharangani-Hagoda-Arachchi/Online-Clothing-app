@@ -12,7 +12,7 @@ enum Categories: String {
     case Apparel = "Apparel"
     case Dress = "Dress"
     case TShirt = "TShirt"
-    case Bag = "bag"
+    case Bag = "Bag"
 }
 
 enum GenderCategory : String {
