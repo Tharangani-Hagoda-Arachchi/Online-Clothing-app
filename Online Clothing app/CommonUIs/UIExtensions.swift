@@ -91,6 +91,10 @@ extension Color {
         return Color(hex: "B1B1B1")
     }
     
+    static var Default: Color {
+           return Color(hex: "4C4F4D")
+       }
+    
     static var darkGray: Color {
         return Color(hex: "4C4F4D")
     }

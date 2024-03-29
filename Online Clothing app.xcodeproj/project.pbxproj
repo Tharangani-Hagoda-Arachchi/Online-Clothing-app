@@ -10,6 +10,11 @@
 		59044B722BB677ED00B54669 /* HashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044B712BB677ED00B54669 /* HashtagsView.swift */; };
 		59044B742BB6998C00B54669 /* TrendingHashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044B732BB6998C00B54669 /* TrendingHashtagsView.swift */; };
 		59044B762BB69D4B00B54669 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044B752BB69D4B00B54669 /* FooterView.swift */; };
+		595BDA412BB6FC5B001EBC53 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595BDA402BB6FC5B001EBC53 /* SideMenuView.swift */; };
+		595BDA432BB6FC93001EBC53 /* SideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595BDA422BB6FC93001EBC53 /* SideView.swift */; };
+		595BDA452BB70EBA001EBC53 /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595BDA442BB70EBA001EBC53 /* GenderView.swift */; };
+		595BDA472BB735E1001EBC53 /* SideCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595BDA462BB735E1001EBC53 /* SideCartView.swift */; };
+		595BDA492BB73DB2001EBC53 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595BDA482BB73DB2001EBC53 /* CartItem.swift */; };
 		596BF6B82BAFDFC4004770BE /* Online_Clothing_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596BF6B72BAFDFC4004770BE /* Online_Clothing_appApp.swift */; };
 		596BF6BC2BAFDFC5004770BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596BF6BB2BAFDFC5004770BE /* Assets.xcassets */; };
 		596BF6BF2BAFDFC5004770BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596BF6BE2BAFDFC5004770BE /* Preview Assets.xcassets */; };
@@ -74,6 +79,11 @@
 		59044B712BB677ED00B54669 /* HashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagsView.swift; sourceTree = "<group>"; };
 		59044B732BB6998C00B54669 /* TrendingHashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingHashtagsView.swift; sourceTree = "<group>"; };
 		59044B752BB69D4B00B54669 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		595BDA402BB6FC5B001EBC53 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		595BDA422BB6FC93001EBC53 /* SideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideView.swift; sourceTree = "<group>"; };
+		595BDA442BB70EBA001EBC53 /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		595BDA462BB735E1001EBC53 /* SideCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCartView.swift; sourceTree = "<group>"; };
+		595BDA482BB73DB2001EBC53 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		596BF6B42BAFDFC4004770BE /* Online Clothing app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online Clothing app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596BF6B72BAFDFC4004770BE /* Online_Clothing_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Online_Clothing_appApp.swift; sourceTree = "<group>"; };
 		596BF6BB2BAFDFC5004770BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -253,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				599E59972BB55D3500980D46 /* Product.swift */,
+				595BDA482BB73DB2001EBC53 /* CartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				599986092BB532EA00C08ED9 /* HomeView.swift */,
+				595BDA402BB6FC5B001EBC53 /* SideMenuView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -300,6 +312,9 @@
 				59044B712BB677ED00B54669 /* HashtagsView.swift */,
 				59044B732BB6998C00B54669 /* TrendingHashtagsView.swift */,
 				59044B752BB69D4B00B54669 /* FooterView.swift */,
+				595BDA422BB6FC93001EBC53 /* SideView.swift */,
+				595BDA442BB70EBA001EBC53 /* GenderView.swift */,
+				595BDA462BB735E1001EBC53 /* SideCartView.swift */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";
@@ -456,12 +471,17 @@
 			files = (
 				59044B742BB6998C00B54669 /* TrendingHashtagsView.swift in Sources */,
 				5999860A2BB532EA00C08ED9 /* HomeView.swift in Sources */,
+				595BDA412BB6FC5B001EBC53 /* SideMenuView.swift in Sources */,
+				595BDA472BB735E1001EBC53 /* SideCartView.swift in Sources */,
 				59044B762BB69D4B00B54669 /* FooterView.swift in Sources */,
 				599E599C2BB569E400980D46 /* Categories.swift in Sources */,
+				595BDA452BB70EBA001EBC53 /* GenderView.swift in Sources */,
 				5999860F2BB5367C00C08ED9 /* typealias.swift in Sources */,
 				596BF6E92BAFE075004770BE /* WelcomeView.swift in Sources */,
 				596BF6E42BAFE042004770BE /* RoundButton.swift in Sources */,
+				595BDA492BB73DB2001EBC53 /* CartItem.swift in Sources */,
 				59C890CD2BB31FAB004B7AFF /* SignUpViewModel.swift in Sources */,
+				595BDA432BB6FC93001EBC53 /* SideView.swift in Sources */,
 				599E59982BB55D3500980D46 /* Product.swift in Sources */,
 				596BF6B82BAFDFC4004770BE /* Online_Clothing_appApp.swift in Sources */,
 				59044B722BB677ED00B54669 /* HashtagsView.swift in Sources */,
