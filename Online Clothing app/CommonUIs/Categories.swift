@@ -13,4 +13,6 @@ var product4: Product = .init(title: "Casual Extended Sleeves color block women 
 let hashtags = ["#2024", "#spring", "#collection", "#fall", "#dress", "#wintercollection", "#fashion"]
 
 
-var cartitems: [CartItem] = [.init(product: product1, count: 1), .init(product: product2, count: 2), .init(product: product3, count: 3)]
+var cartItems: [CartItem] = [.init(product: product1, count: 1), .init(product: product2, count: 2), .init(product: product3, count: 3)]
+
+var products: [Product] = [product1, product2, product3, product4]

@@ -10,69 +10,81 @@ import SwiftUI
 struct HomeView: View {
     
     @State var presentSideMenu = false
+    @State var presentSideCart = false
     
     private var categories = [Categories.All.rawValue, Categories.Apparel.rawValue, Categories.Dress.rawValue, Categories.TShirt.rawValue, Categories.Bag.rawValue]
     
     @State private var selectedCategory: Int = 0
     
     var body: some View {
-        ZStack{
-            Color.white.edgesIgnoringSafeArea(.all)
+        NavigationStack{
+            
             ZStack{
-                VStack(spacing: 0){
-                    ScrollView(.vertical){
-                        HeroImageView()
-                        NewArrivalNew()
-                        Image("Brand")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        CollectionsView()
-                        TrendingHashtagsView()
-                        FooterView()
-                        Spacer()
+                Color.white.edgesIgnoringSafeArea(.all)
+                ZStack{
+                    VStack(spacing: 0){
+                        ScrollView(.vertical){
+                            HeroImageView()
+                            NewArrivalNew()
+                            Image("Brand")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            CollectionsView()
+                            TrendingHashtagsView()
+                            FooterView()
+                            Spacer()
+                        }
+                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     }
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding(.top, 20)
                 }
-                .padding(.top, 20)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .overlay(alignment: .top){
-                HeaderView{
-                    presentSideMenu.toggle()
-                } cartAction:{
-                    
-                    
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .overlay(alignment: .top){
+                    HeaderView{
+                        presentSideMenu.toggle()
+                    } cartAction:{
+                        
+                        presentSideCart.toggle()
+                    }
                 }
+                SideMenu()
+                SideCart()
             }
-            SideMenu()
+            .navigationBarHidden(true)
+            
         }
-        
-    
     }
     
     @ViewBuilder
-       private func HeroImageView() -> some View{
-           ZStack{
-            Image("Hero")
-                   .resizable()
-                   .aspectRatio(contentMode: .fit)
-                   .frame(maxWidth: .infinity)
-                   .frame(height: 620)
-               Button{
-                   
-               }label: {
-                   RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).overlay{
-                       Text("Explore Collection")
-                           .font(Font.custom("RobotoSerif", size:20))
-                           .foregroundColor(.white)
-                   }
-                  
-               }
-               .frame(width: 250, height: 50)
-               .tint(.darkBlue.opacity(0.5))
-               
-               .offset(.init(width: 0, height: 200))
-           }
+    private func HeroImageView() -> some View{
+        
+        NavigationLink{
+            ProductsList()
+            
+        }label: {
+            ZStack{
+                Image("Hero")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 620)
+                Button{
+                    
+                }label: {
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).overlay{
+                        Text("Explore Collection")
+                            .font(Font.custom("RobotoSerif", size:20))
+                            .foregroundColor(.white)
+                    }
+                    
+                }
+                .frame(width: 250, height: 50)
+                .tint(.darkBlue.opacity(0.5))
+                
+                .offset(.init(width: 0, height: 200))
+            }
+        }
+    
        }
     
     @ViewBuilder
@@ -144,17 +156,28 @@ struct HomeView: View {
             .font(Font.custom("RobotoSerif", size: 28))
             .foregroundColor(Color.darkBlue).opacity(0.6)
         
-        Image("Collection 1")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(height: 244, alignment: .top)
-            .clipped()
+        NavigationLink{
+            ProductsList()
+        } label :{
+            
+            Image("Collection 1")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 244, alignment: .top)
+                .clipped()
+        }
         
-        Image("Collection 2")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(height: 244, alignment: .top)
-            .clipped()
+        NavigationLink{
+            ProductsList()
+        } label :{
+            
+            Image("Collection 2")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 244, alignment: .top)
+                .clipped()
+        }
+        
         
         Image("Divider")
             .resizable()
@@ -173,7 +196,7 @@ struct HomeView: View {
     
     @ViewBuilder
     private func SideCart() -> some View{
-        
+        SideView(isShowing: $presentSideCart, content: AnyView(SideCartViewContents(presentSideMenu: $presentSideCart)), direction: .trailing)
     }
     
 

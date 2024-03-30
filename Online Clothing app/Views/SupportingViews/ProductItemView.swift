@@ -13,30 +13,32 @@ struct ProductItemView: View {
     
     var body: some View {
         
-        
+        NavigationLink{
+            ProductDetailsView(product: product)
+        } label: {
+            VStack{
+            Image(product.images[0])
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 180, height: 250)
+                .cornerRadius(5)
+                .shadow(radius: 1)
             
-            Button{
-                
-            } label: {
-                VStack{
-                Image(product.images[0])
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 180, height: 250)
-                    .cornerRadius(5)
-                    .shadow(radius: 1)
-                
-                Text(product.title)
-                    .font(Font.custom("RobotoSerif", size: 12))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color.darkBlue)
-                    .frame(width: 167, alignment: .top)
-                
-                Text("$\(product.price)")
-                    .font(Font.custom("RobotoSerif", size: 14))
-                    .foregroundColor(Color.blue)
-                    .padding(.top,2)
-            }
+            Text(product.title)
+                .font(Font.custom("RobotoSerif", size: 12))
+                .multilineTextAlignment(.leading)
+                .foregroundColor(Color.darkBlue)
+                .frame(width: 167, alignment: .top)
+            
+            Text("$\(product.price)")
+                .font(Font.custom("RobotoSerif", size: 16))
+                .multilineTextAlignment(.leading)
+                .foregroundColor(Color.blue)
+                .frame(width: 165, alignment: .leading)
+                .padding(.top,2)
+        }
+            
+           
           
         }
     }
