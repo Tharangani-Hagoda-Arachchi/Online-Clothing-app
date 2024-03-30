@@ -23,10 +23,15 @@ struct SignUpView: View {
                 
                 Spacer()
                 
-                Image(systemName: "bird")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
+                Image("Feminine Black Purple Brand Fashion Logo")
+                   .resizable()
+                   .scaledToFit()
+                   .opacity(0.7)
+//                    .background(Color.white)
+                   .frame(width: 100 , height: 100
+                   )
+                   .cornerRadius(28)
+//                   .padding(.bottom , 0)
                     .padding(.bottom, .screenWidth * 0.1)
               
                 
@@ -63,10 +68,9 @@ struct SignUpView: View {
                     .cornerRadius(20)
                 
                     .padding(.bottom, .screenWidth * 0.04)
-                
-                RoundButton(title: "Sign Up") {
-                 
-                }
+                NavigationLink(destination: LoginView()) {
+                                        RoundButton(title: "SignUp")
+                                    }
                 .padding(.bottom, .screenWidth * 0.04)
                 
                 

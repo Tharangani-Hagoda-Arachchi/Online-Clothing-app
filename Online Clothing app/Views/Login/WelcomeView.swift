@@ -19,32 +19,34 @@ struct WelcomeView: View {
             
             VStack{
                 Spacer()
-                Image(systemName: "globe")
+                 Image("Feminine Black Purple Brand Fashion Logo")
                     .resizable()
                     .scaledToFit()
-                    .background(Color.white)
-                    .frame(width: 60 , height: 60
+                    .opacity(0.7)
+//                    .background(Color.white)
+                    .frame(width: 100 , height: 100
                     )
+                    .cornerRadius(28)
                     .padding(.bottom , 0)
                 
                 Text("Welcome to Our Store")
-                    .font(.customfont(.semibold, fontSize: 48))
+                    .font(.customfont(.medium, fontSize: 48))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                 
-                Text("Welcome to our store")
+                Text("Welcome to Rachella Clothing Store")
                     .font(.customfont(.medium, fontSize: 20))
                     .foregroundColor(.white.opacity(0.7))
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 30)
                 
                 
-                RoundButton(title: "Get started"){
-                   
-                }
+                NavigationLink(destination: LoginView()) {
+                                        RoundButton(title: "Get started")
+                                    }
                 
                 Spacer()
-                    .frame(height: 80)
+                    .frame(height: 100)
                 
             }
             .padding(.horizontal, 20)
